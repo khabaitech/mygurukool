@@ -29,6 +29,10 @@ var app = angular.module("myApp",['ngRoute']);
     {
       templateUrl : "angular/app/home.html"
     })
+    .when("/login",
+    {
+      templateUrl : "angular/app/login1.html"
+    })
     .when("/requestbyteacher",
     {
       templateUrl : "angular/app/login.html"
