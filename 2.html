@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx" ng-app="myApp">
+
+
+<!-- Mirrored from demo.hasthemes.com/bruce-preview/creative-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Aug 2020 07:30:29 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Gurukool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="angular/assets/images/favicon.ico">
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="angular/assets/css/vendor/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="angular/assets/css/vendor/fontawesome-all.min.css">
+
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="angular/assets/css/plugins/swiper.min.css">
+
+    <!-- Animate text CSS -->
+    <link rel="stylesheet" href="angular/assets/css/plugins/animate-text.css">
+
+    <!-- AOS CSS -->
+    <link href="angular/assets/css/plugins/aos.css" rel="stylesheet">
+
+    <!-- Some Plugins CSS -->
+    <link href="angular/assets/css/plugins/some-plugins.min.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="angular/assets/css/plugins/animate.min.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="angular/assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+
+        <!-- Header Top Wrap Start -->
+        <div class="header-top-wrap theme-bg-three">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4  col-6">
+                        <p class="text-md-left top-message"><a href="mailto:info@example.com">info@example.com</a></p>
+                    </div>
+                    <div class="col-md-4 col-6  d-md-block d-none">
+                        <p class="top-message text-md-center"><a href="#!login">Login</a> <span class="text-white"> / </span> <a href="#">Register</a> </p>
+                    </div>
+                    <div class="col-md-4  col-6">
+                        <!-- header right box -->
+                        <div class="header-right-box">
+                            <div class="header-right-inner" id="hidden-icon-wrapper">
+                                <p class="mobile-top-message d-block d-md-none"><a href="#!login">Login</a><span> / </span><a href="#">Register</a> </p>
+                                <!-- language-menu -->
+                                <div class="language-menu mb-25">
+                                    <ul class="list ht-social-networks mt-30">
+
+                                <li class="item">
+                                    <a href="https://facebook.com/" target="_blank">
+                                        <i class="fa fa-facebook-f link-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://twitter.com/" target="_blank">
+                                        <i class="fa fa-twitter link-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://instagram.com/" target="_blank">
+                                        <i class="fa fa-instagram link-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://linkedin.com/" target="_blank">
+                                        <i class="fa fa-linkedin link-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                                </div>
+                            </div>
+                            <!-- hidden icons menu -->
+                            <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top Wrap End -->
+
+        <!-- Header Bottom Wrap Start -->
+        <div class="header-bottom-wrap header-area--absolute transparent-bg header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header default-menu-style position-relative">
+
+                            <!-- brand logo -->
+                            <div class="header__logo">
+                                <a href="index.html">
+                                    <img src="angular/assets/images/logo/logo.jpeg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <!-- header midle box  -->
+                            <div class="header-midle-box">
+                                <div class="header-bottom-wrap d-md-block d-none">
+                                    <div class="header-bottom-inner">
+                                        <div class="header-bottom-left-wrap">
+                                            <!-- navigation menu -->
+                                            <div class="header__navigation d-none d-lg-block">
+                                                <nav class="navigation-menu primary--menu" ng-controller="myctrl">
+                                                    <ul class="nav">
+                                                        <li class="has-children" ng-repeat="x in navlist"><a class="nav-link" href="{{x.link}}">{{x.name}}</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Bottom Wrap End -->
+
+    </div>
+    <!--====================  End of header area  ====================-->
+
+     <div ng-view></div>
+
+    
+
+    <!--====================  footer area ====================-->
+    <div class="footer-area-wrapper ">
+        <div class="footer-area section-space--ptb_120 bg-img footer-bg--overlay" data-bg="angular/assets/images/bg/footer-bg-01.jpg">
+            <div class="container">
+                <div class="row footer-widget-wrapper">
+                    <div class="col-lg-4 col-md-12 col-sm-12 footer-widget">
+                        <h4 class="footer-widget__title mb-20 text-white">My Gurukool</h4>
+                        <!--<div class="footer-widget__logo mb-30">
+                            <img src="assets/images/logo/logo.jpeg" height="70px" width="200px" class="img-fluid" alt="">
+                        </div>-->
+                        <div class="footer-widget-dic">
+
+                            <p class="footer-dec">We have qualified, trained, experienced team of teacher, who are proactive, induce thinking and also ignite scientific enqueries/ideas.</p>
+
+                            <div class="newsletter-footer-wrap mt-20">
+                                <h5 class="mb-10">Subscribe Newsletter</h5>
+                                <!--<p>Subscribe our newsletter and get latest update
+                                    about our offers, promotions and adds</p>-->
+                                <div class="newsletter-footer mt-20">
+                                    <form action="#" class="widget-newsletter-form">
+                                        <input type="text" placeholder="Enter your email">
+                                        <div class="subscribe-button">
+                                            <button class="subscribe-btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <ul class="list ht-social-networks mt-30">
+
+                                <li class="item">
+                                    <a href="https://facebook.com/" target="_blank">
+                                        <i class="fa fa-facebook-f link-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://twitter.com/" target="_blank">
+                                        <i class="fa fa-twitter link-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://instagram.com/" target="_blank">
+                                        <i class="fa fa-instagram link-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="https://linkedin.com/" target="_blank">
+                                        <i class="fa fa-linkedin link-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        <div class="coustom-row-in-footer">
+                            <div class="footer-widget-coustom-col footer-widget">
+                                <h4 class="footer-widget__title mb-20 text-white">Useful Links</h4>
+                                <ul class="footer-widget__item-list">
+                                    <li><a href="#" class="hover-style-link">About us</a></li>
+                                    <li><a href="#" class="hover-style-link">Requested Teacher</a></li>
+                                    <li><a href="#" class="hover-style-link">Requested Student</a></li>
+                                    <li><a href="#" class="hover-style-link">Privacy Policy</a></li>
+                                    <li><a href="#" class="hover-style-link">Contact us</a></li>
+                                </ul>
+                                <ul class="footer-widget__item-list">
+                                    <li><a href="#" class="hover-style-link">Online Support</a></li>
+                                    <li><a href="#" class="hover-style-link">Our Offers</a></li>
+                                    <li><a href="#" class="hover-style-link">Conditions</a></li>
+                                    <li><a href="#" class="hover-style-link">Pages</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget-coustom-col footer-widget">
+                                <h4 class="footer-widget__title mb-20 text-white">Contact Info</h4>
+                                <div class="footer-widget__list">
+                                    <div class="single-footer-widger">
+                                        <h5>Address</h5>
+                                        <p>275 South Poal, 4th Floor Central Plaza, Main Town, New Yourk, USA</p>
+                                    </div>
+                                    <div class="single-footer-widger">
+                                        <h5>Phone</h5>
+                                        <p>80768 61218
+                                    </div>
+                                    <div class="single-footer-widger">
+                                        <h5>Email:</h5>
+                                        <p>
+                                            <a href="#">info@example.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-4 col-sm-6 footer-widget">
+                        
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area mt-25 mb-25">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright-text">Copyright &copy; All Rights Reserved. <a href="http://khabaitech.com/" target="_blank" >Khabai Tech</a> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of footer area  ====================-->
+
+
+
+
+
+
+
+
+
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top fa fa-angle-double-up"></i>
+        <i class="arrow-bottom fa fa-angle-double-up"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+
+
+
+
+
+
+
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="angular/assets/images/logo/dark-logo.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+
+                    <ul>
+                        <li class="has-children has-children--multilevel-submenu">
+                            <a href="#"><span>Home</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="creative.html"><span>Creative Home 01</span></a></li>
+                                <li><a href="creative-2.html"><span>Creative Home 02</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="inner-pages/creative/about-us.html"><span>About</span></a>
+                        </li>
+                        <li class="has-children">
+                            <a href="inner-pages/creative/services.html"><span>Services</span></a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#"><span>Pages</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="inner-pages/creative/team.html"><span>Team</span></a></li>
+                                <li><a href="inner-pages/creative/team-details.html"><span>Team Details</span></a></li>
+                                <li><a href="inner-pages/creative/services-details.html"><span>Services Details</span></a></li>
+                                <li><a href="inner-pages/creative/pricing-package.html"><span>Pricing Package</span></a></li>
+                                <li><a href="inner-pages/creative/clients-logo.html"><span>Clients Logo</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children has-children--multilevel-submenu">
+                            <a href="#"><span>Blog</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="inner-pages/creative/blog-grid.html"><span>Blog Grid</span></a></li>
+                                <li><a href="inner-pages/creative/blog-left-sidebar.html"><span>Blog left sidebar</span></a></li>
+                                <li><a href="inner-pages/creative/blog-right-sidebar.html"><span>Blog right sidebar</span></a></li>
+                                <li><a href="inner-pages/creative/blog-details-full-width.html"><span>Blog details no sidebar</span></a></li>
+                                <li><a href="inner-pages/creative/blog-details-left-sidebar.html"><span>Blog details left sidebar</span></a></li>
+                                <li><a href="inner-pages/creative/blog-details-right-sidebar.html"><span>Blog details right sidebar</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="inner-pages/creative/contact-us.html"><span>Contact</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+    <!-- JS
+    ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="angular/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="angular/assets/js/vendor/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="angular/assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="angular/assets/js/plugins/swiper.min.js"></script>
+
+    <!-- Waypoints JS -->
+    <script src="angular/assets/js/plugins/waypoints.min.js"></script>
+
+    <!-- Counter down JS -->
+    <script src="angular/assets/js/plugins/countdown.min.js"></script>
+
+    <!-- Isotope JS -->
+    <script src="angular/assets/js/plugins/isotope.min.js"></script>
+
+    <!-- Masonry JS -->
+    <script src="angular/assets/js/plugins/masonry.min.js"></script>
+
+    <!-- ImagesLoaded JS -->
+    <script src="angular/assets/js/plugins/images-loaded.min.js"></script>
+
+    <!-- Counterup JS -->
+    <script src="angular/assets/js/plugins/counterup.min.js"></script>
+
+    <!-- WOW JS -->
+    <script src="angular/assets/js/plugins/wow.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="angular/assets/js/plugins/aos.js"></script>
+
+    <!-- Some plugins JS -->
+    <script src="angular/assets/js/plugins/some-plugins.js"></script>
+
+    <!-- Main JS -->
+    <script src="angular/assets/js/main.js"></script>
+
+    <script type="text/javascript" src="angular/js/navbarlist.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>My Gurukool</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+</head>
+<body >
+<div  ng-controller="requestTeacherFormCtrl">
+	
+
+<!-- starting of login page -->
+<!-- COntainer tag-->
+<div class="wrapper">
+	<!-- row tag for seraching bar -->
+	<div class="row">
+		<div class="col-lg-12">
+			<!--starting of form nav-->
+			<form class="form-inline col-lg-12" action="" method="POST"><!-- search bar form -->
+				<div class="input-group col-lg-7 ml-auto mr-auto" >
+					
+					<input type="text" name="searchTeacherName" id="searchTeacherName" class="form-control" placeholder="Seacrh Teacher Name">
+					<div class="input-group-prepend">
+						<span class="input-group-text fa-fa-dashboard">@</span>
+					</div>
+				</div>
+			</form><!-- end of search bar form-->
+		    
+		    <!--end of search nav-->
+			<!-- search result output div-->
+			<div class="searchResult col-lg-7 ml-auto mr-auto" id="searchResult">
+				<div class="ml-4" id="searchResultOutput">
+					
+				</div>
+			</div>
+			<!-- end of search result div-->
+		</div>
+	</div>
+	<!-- end of searching row bar-->
+ </div>
+
+
+<!--starting of request teacher container div-->
+<div class="container mt-5">
+	<div class="row">
+		<!-- image div -->
+		<div class="col-lg-5">
+			<img src="https://i.pinimg.com/originals/aa/f9/0b/aaf90b6183e4f2f3bdd641ec1c1b0412.png" width="90%" height="100%" class="mt-5">
+		</div>
+		<!--end of image div-->
+		<!-- request teacher div-->
+          <div class="col-lg-7">
+          	 <form onsubmit="validate()" method="post" action="" >
+                <div class="col-lg-12 mb-5">
+                	<h1 class="text-primary">Request Your Teacher</h1>
+                </div>
+
+          	 	<div class="form-group mt-5">
+          	 		<input type="text" name="studentName" class="form-control" id="studentName" placeholder="Student Name *" required>
+          	 	</div>
+          	 	<div class="form-group row mt-4">
+          	 		<select class="col-lg-5 m-auto form-control" >
+          	 			<option ng-repeat='c in classes'>{{c}}</option>
+          	 		</select>
+          	 		<select class="col-lg-5 m-auto form-control" >
+          	 			<option ng-repeat='subject in subjects'>{{subject}}</option>
+          	 		</select>
+          	 	</div>
+               
+               <div class="form-group mt-4">
+          	 		<input type="number" name="studentmobile" class="form-control" id="studentmobile" placeholder="Mobile Number *" required>
+          	 	</div>
+
+          	 	<div class="form-group mt-4">
+          	 		<input type="email" name="studentemail" class="form-control" id="studentemail" placeholder="E-mail *" required>
+          	 	</div>
+                 
+
+                 <div class="form-group mt-4">
+                 	<input type="submit" name="studentRequestTeacherBtn" id="studentRequestTeacherBtn" value="Search" class="Btn btn-primary rounded pl-4 pr-4 pt-2 pb-2 float-right">
+                 </div>
+          	 </form>
+          </div>
+		<!-- end of request teacher div-->
+	</div>
+</div>
+
+
+
+
+
+</div>
+
+<script type="text/javascript" src="../js/loginscript.js"></script>
+
+</body>
+</html>
