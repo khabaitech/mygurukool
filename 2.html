@@ -73,6 +73,11 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-4  col-6">
+                        <div ng-controller="ModalCtrl">
+      <button class="btn btn-info" ng-click="open()" style="margin: 15px;">Open Modal</button>
+      
+      <h2 style="color: red;">{{result}}</h2>
+    </div>
                         <p class="text-md-left top-message"><a href="mailto:info@example.com">info@example.com</a></p>
                     </div>
                     <div class="col-md-4 col-6 d-md-block d-none">
@@ -171,13 +176,8 @@
 
     </div>
     <!--====================  End of header area  ====================-->
-<div ng-controller="ModalCtrl">
-      <button class="btn btn-info" ng-click="open()" style="margin: 15px;">Open Modal</button>
-      
-      <h2 style="color: red;">{{result}}</h2>
-    </div>
     
-
+ <div ng-view></div>
     
 
     <!--====================  footer area ====================-->
