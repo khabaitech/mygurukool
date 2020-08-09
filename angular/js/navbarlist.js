@@ -9,7 +9,7 @@ var app = angular.module("myApp",['ngRoute', 'ui.bootstrap']);
                {name:'Subjects',link:'#!subject'}
            ];
 	});
-	app.controller('ModalCtrl', function($scope, $uibModal) {
+	app.controller("ModalCtrl", function($scope, $uibModal) {
 
 	  $scope.open = function() {
 	    var modalInstance =  $uibModal.open({
@@ -23,9 +23,9 @@ var app = angular.module("myApp",['ngRoute', 'ui.bootstrap']);
 	    });
 
 	  };
-	})
+	});
 
-	app.controller('ModalContentCtrl', function($scope, $uibModalInstance) {
+	app.controller("ModalContentCtrl", function($scope, $uibModalInstance) {
 
 	  $scope.ok = function(){
 	    $uibModalInstance.close("Ok");
