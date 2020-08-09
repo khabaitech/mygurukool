@@ -41,7 +41,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script>
-
+    <script data-require="angular-animate@1.6.*" data-semver="1.6.5" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+    <script data-require="angular-touch@1.6.*" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-touch.js"></script>
 </head>
 
 <body>
@@ -73,8 +74,8 @@
                     <div class="col-md-4  col-6">
                         <p class="text-md-left top-message"><a href="mailto:info@example.com">info@example.com</a></p>
                     </div>
-                    <div class="col-md-4 col-6  d-md-block d-none">
-                        <p class="top-message text-md-center"><a href="#!login">Login</a> <span class="text-white"> / </span> <a href="#">Register</a> </p>
+                    <div class="col-md-4 col-6 d-md-block d-none  ng-controller="ModalCtrl"">
+                        <p class="top-message text-md-center" ng-click="open()">Login</p>
                     </div>
                     <div class="col-md-4  col-6">
                         <!-- header right box -->
