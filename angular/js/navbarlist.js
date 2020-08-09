@@ -1,4 +1,4 @@
-var app = angular.module("myApp",['ngRoute']);
+var app = angular.module("myApp",['ngRoute'],['ui.bootstrap']);
 	app.controller("myctrl",function($scope){
            $scope.navlist = [
                {name:'Home',link:'#!home'},
@@ -8,6 +8,33 @@ var app = angular.module("myApp",['ngRoute']);
                {name:'RequestByStudent',link:'#!requestbystudent'},
                {name:'Subjects',link:'#!subject'}
            ];
+	});
+	app.controller('ModalCtrl', function($scope, $uibModal) {
+
+	  $scope.open = function() {
+	    var modalInstance =  $uibModal.open({
+	      templateUrl: "modalContent.html",
+	      controller: "ModalContentCtrl",
+	      size: '',
+	    });
+
+	    modalInstance.result.then(function(response){
+		$scope.result = `${response} button hitted`;
+	    });
+
+	  };
+	})
+
+	app.controller('ModalContentCtrl', function($scope, $uibModalInstance) {
+
+	  $scope.ok = function(){
+	    $uibModalInstance.close("Ok");
+	  }
+
+	  $scope.cancel = function(){
+	    $uibModalInstance.dismiss();
+	  } 
+
 	});
 
 
