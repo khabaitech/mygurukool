@@ -1,4 +1,4 @@
-var app = angular.module("myApp",['ngRoute']);
+var app = angular.module("myApp",['ngRoute', 'ui.bootstrap']);
 	app.controller("myctrl",function($scope){
            $scope.navlist = [
                {name:'Home',link:'#!home'},
