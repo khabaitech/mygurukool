@@ -10,7 +10,48 @@ var app = angular.module("myApp",['ngRoute']);
            ];
 	});
 	
-
+	myApp.controller('mainController', function($scope,$http,$routeParams,$uibModal){
+	         
+		$scope.showPopup = function(){	
+					
+		  user = {'first_name':'JON','last_name':'Smith','address':'Ny'};
+		  $scope.modalInstance = $uibModal.open({
+				 ariaLabelledBy: 'modal-title',
+				 ariaDescribedBy: 'modal-body',
+				 templateUrl: 'view.html',
+				 controller :'ModelHandlerController',
+				 controllerAs: '$ctrl',
+				 size: 'lg',
+				 resolve: {
+					  user: function(){
+							return user;
+						 }
+					}
+			   });
+			   
+		}
+						
+	    
+	});
+	
+myApp.controller("ModelHandlerController",function($scope,$uibModalInstance,$http){
+  
+		
+		$scope.first_name = user.first_name;
+		$scope.last_name = user.last_name;
+		$scope.address  = user.address;
+		
+		 $scope.cancelModal = function(){
+			 console.log("cancelmodal");
+			 $uibModalInstance.dismiss('close');
+		 }
+		 $scope.ok = function(){
+		 $uibModalInstance.close('save');
+		 
+		 }
+		
+ 
+});
 
 
 
