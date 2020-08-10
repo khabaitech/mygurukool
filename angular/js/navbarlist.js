@@ -10,14 +10,34 @@
                   templateUrl : 'angular/app/home.html',
                   controller  : 'mainController'
               })
-			  .when('/about', {
-                  templateUrl : 'about.html',
-                  controller  : 'aboutController'
-              })
-			   .when('/contact', {
-                  templateUrl : 'contact.html',
-                  controller  : 'contactController'
-              })
+	     .when("/about",
+	    {
+	      templateUrl : "angular/app/home.html"
+	    })
+	    .when("/contact",
+	    {
+	      templateUrl : "angular/app/home.html"
+	    })
+	    .when("/login",
+	    {
+	      templateUrl : "angular/app/login1.html"
+	    })
+	    .when("/requestbyteacher",
+	    {
+	      templateUrl : "angular/app/login.html"
+	    })
+	    .when("/requestbystudent",
+	    {
+	      templateUrl : "angular/app/std_request.html"
+	    })
+	    .when("/subject",
+	    {
+	      templateUrl : "angular/app/home.html"
+	    })
+	    .when("/home",
+	    {
+	      templateUrl : "angular/app/home.html"
+	    })
 
     });
 
