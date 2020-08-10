@@ -62,6 +62,7 @@ app.controller("ModelHandlerController",function($scope,$uibModalInstance,$http)
     .when("/",
     {
       templateUrl : "angular/app/home.html"
+       controller  : 'mainController'
     })
     .when("/about",
     {
