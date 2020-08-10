@@ -97,18 +97,7 @@ spaApp.controller("ModelHandlerController",function($scope,$uibModalInstance,$ht
 });	
 	
 	
-// create the controller and inject Angular's $scope
-spaApp.controller('aboutController', function($scope,$routeParams){
-	    $scope.first_name = "Jon";
-		$scope.last_name = "Smith";
-		$scope.changeName = function(){
-			$scope.first_name = "New Jon";
-		    $scope.last_name = "Mew Smith";
-		}
-	});
-spaApp.controller('contactController', function($scope,$routeParams){
-	    
-	});	
+
 	
 	
 
