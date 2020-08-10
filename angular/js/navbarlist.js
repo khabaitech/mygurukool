@@ -1,4 +1,4 @@
-var app = angular.module("myApp",['ngRoute']);
+var app = angular.module("myApp", ['ngRoute','ngTouch','ngAnimate','ui.bootstrap']);
 	app.controller("myctrl",function($scope){
            $scope.navlist = [
                {name:'Home',link:'#!home'},
@@ -10,7 +10,7 @@ var app = angular.module("myApp",['ngRoute']);
            ];
 	});
 	
-	myApp.controller('mainController', function($scope,$http,$routeParams,$uibModal){
+	app.controller("mainController", function($scope,$http,$routeParams,$uibModal){
 	         
 		$scope.showPopup = function(){	
 					
@@ -34,7 +34,7 @@ var app = angular.module("myApp",['ngRoute']);
 	    
 	});
 	
-myApp.controller("ModelHandlerController",function($scope,$uibModalInstance,$http){
+app.controller("ModelHandlerController",function($scope,$uibModalInstance,$http){
   
 		
 		$scope.first_name = user.first_name;
