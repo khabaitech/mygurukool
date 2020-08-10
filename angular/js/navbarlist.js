@@ -10,38 +10,38 @@
                   templateUrl : 'angular/app/home.html',
                   controller  : 'mainController'
               })
-	     .when("/about",
+	     .when('/about',
 	    {
-	      templateUrl : "angular/app/home.html"
+	      templateUrl : 'angular/app/home.html'
 	    })
-	    .when("/contact",
+	    .when('/contact',
 	    {
-	      templateUrl : "angular/app/home.html"
+	      templateUrl : 'angular/app/home.html'
 	    })
-	    .when("/login",
+	    .when('/login',
 	    {
-	      templateUrl : "angular/app/login1.html"
+	      templateUrl : 'angular/app/login1.html'
 	    })
-	    .when("/requestbyteacher",
+	    .when('/requestbyteacher',
 	    {
-	      templateUrl : "angular/app/login.html"
+	      templateUrl : 'angular/app/login.html'
 	    })
-	    .when("/requestbystudent",
+	    .when('/requestbystudent',
 	    {
-	      templateUrl : "angular/app/std_request.html"
+	      templateUrl : 'angular/app/std_request.html'
 	    })
-	    .when("/subject",
+	    .when('/subject',
 	    {
-	      templateUrl : "angular/app/home.html"
+	      templateUrl : 'angular/app/home.html'
 	    })
-	    .when("/home",
+	    .when('/home',
 	    {
-	      templateUrl : "angular/app/home.html"
+	      templateUrl : 'angular/app/home.html'
 	    })
 
     });
 
-spaApp.controller("myctrl",function($scope){
+spaApp.controller('myctrl', function($scope){
            $scope.navlist = [
                {name:'Home',link:'#!home'},
                {name:'About',link:'#!about'},
@@ -61,7 +61,7 @@ spaApp.controller('mainController', function($scope,$http,$routeParams,$uibModal
 		  $scope.modalInstance = $uibModal.open({
 				 ariaLabelledBy: 'modal-title',
 				 ariaDescribedBy: 'modal-body',
-				 templateUrl: 'view.html',
+				 templateUrl: 'angular/app/view.html',
 				 controller :'ModelHandlerController',
 				 controllerAs: '$ctrl',
 				 size: 'lg',
