@@ -1,5 +1,27 @@
-var app = angular.module("myApp", ['ngRoute','ngTouch','ngAnimate','ui.bootstrap']);
-	app.controller("myctrl",function($scope){
+    // create the module and name it spaApp
+    // also include ngRoute for all our routing needs //,'ngTouch','ngAnimate','ui.bootstrap'
+   var spaApp = angular.module('spaApp', ['ngRoute','ngTouch','ngAnimate','ui.bootstrap']);
+
+    // configure our routes
+    spaApp.config(function($routeProvider) {
+              $routeProvider
+              // route for the home page
+              .when('/', {
+                  templateUrl : 'angular/app/home.html',
+                  controller  : 'mainController'
+              })
+			  .when('/about', {
+                  templateUrl : 'about.html',
+                  controller  : 'aboutController'
+              })
+			   .when('/contact', {
+                  templateUrl : 'contact.html',
+                  controller  : 'contactController'
+              })
+
+    });
+
+spaApp.controller("myctrl",function($scope){
            $scope.navlist = [
                {name:'Home',link:'#!home'},
                {name:'About',link:'#!about'},
@@ -9,8 +31,9 @@ var app = angular.module("myApp", ['ngRoute','ngTouch','ngAnimate','ui.bootstrap
                {name:'Subjects',link:'#!subject'}
            ];
 	});
-	
-	app.controller("mainController", function($scope,$http,$routeParams,$uibModal){
+
+// create the controller and inject Angular's $scope
+spaApp.controller('mainController', function($scope,$http,$routeParams,$uibModal){
 	         
 		$scope.showPopup = function(){	
 					
@@ -34,7 +57,7 @@ var app = angular.module("myApp", ['ngRoute','ngTouch','ngAnimate','ui.bootstrap
 	    
 	});
 	
-app.controller("ModelHandlerController",function($scope,$uibModalInstance,$http){
+spaApp.controller("ModelHandlerController",function($scope,$uibModalInstance,$http){
   
 		
 		$scope.first_name = user.first_name;
@@ -51,46 +74,21 @@ app.controller("ModelHandlerController",function($scope,$uibModalInstance,$http)
 		 }
 		
  
-});
+});	
+	
+	
+// create the controller and inject Angular's $scope
+spaApp.controller('aboutController', function($scope,$routeParams){
+	    $scope.first_name = "Jon";
+		$scope.last_name = "Smith";
+		$scope.changeName = function(){
+			$scope.first_name = "New Jon";
+		    $scope.last_name = "Mew Smith";
+		}
+	});
+spaApp.controller('contactController', function($scope,$routeParams){
+	    
+	});	
+	
+	
 
-
-
-  //routing pages to their destination
-
-  app.config(function($routeProvider){
-    $routeProvider
-    .when("/",
-    {
-      templateUrl : "angular/app/home.html"
-       controller  : 'mainController'
-    })
-    .when("/about",
-    {
-      templateUrl : "angular/app/home.html"
-    })
-    .when("/contact",
-    {
-      templateUrl : "angular/app/home.html"
-    })
-    .when("/login",
-    {
-      templateUrl : "angular/app/login1.html"
-    })
-    .when("/requestbyteacher",
-    {
-      templateUrl : "angular/app/login.html"
-    })
-    .when("/requestbystudent",
-    {
-      templateUrl : "angular/app/std_request.html"
-    })
-    .when("/subject",
-    {
-      templateUrl : "angular/app/home.html"
-    })
-    .when("/home",
-    {
-      templateUrl : "angular/app/home.html"
-    });
-
-  });
