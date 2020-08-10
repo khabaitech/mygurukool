@@ -1,4 +1,4 @@
-app = angular.module("myApp",[]);
+app = angular.module("spaApp",[]);
 
 app.controller("requestTeacherFormCtrl",function($scope){
     $scope.classes = [
